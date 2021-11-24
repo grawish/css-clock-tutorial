@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clock</title>
+</head>
+
+<style>
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+     #circle {
+
+      width: 500px;
+
+      height: 500px;
+
+      border-radius: 50%;
+
+      background: #E4E4E4;
+
+      position: relative;
+    }
+
+    #circle div{
+        position: absolute;
+    }
+
+    .twelve{
+        top: 0;
+        left: 50%;
+    }
+
+    .three{
+        right: 0;
+        top: 50%;
+    }
+
+    .six{
+        bottom: 0; 
+        left: 50%; 
+    }
+
+    .nine{
+        left: 0;
+        top: 50%;
+    }
+
+    .inner-circle{
+
+        width: 400px;
+
+        height: 400px;
+        
+        border-radius: 50%;
+
+        background: #5171FF;
+
+        top: calc(50% - 200px);
+
+        left: calc(50% - 200px);
+
+        box-shadow: 0 0 20px rgba(0,0,0,0.2) inset;
+
+    }
+
+    .dot{
+        
+        width: 40px;
+
+        height: 40px;
+
+        border-radius: 50%;
+
+        background: white;
+
+        top: calc(50% - 20px);
+
+        left: calc(50% - 20px);
+
+        z-index: 10;
+
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .sui{
+        left: 50%;
+        bottom: 50%;
+        width: 10px;
+        transform-origin: bottom;
+    }
+
+    .minute{
+        height: 50%;
+        width: 30px;
+        margin-left: -15px;
+        background: #FFFFFF;
+        animation: minute 3600s linear infinite;
+        box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+
+    .hour{
+        height: 25%;
+        width: 30px;
+        margin-left: -15px;
+        background: #CCCCCC;
+        animation: hour 43200s linear infinite;
+        box-shadow: 0 0 30px rgba(0,0,0,0.5);
+
+    }
+
+    .second{
+        height: 50%;
+        width: 15px;
+        margin-left: -7.5px;
+        background: #4D4D4D;
+        animation: second 60s linear infinite;
+    }
+
+    @keyframes second{
+        from{
+            transform: rotate(180deg);
+        }
+        to{
+            transform: rotate(540deg);
+        }
+    }
+
+    @keyframes minute{
+        from{
+            transform: rotate(60deg);
+        }
+        to{
+            transform: rotate(420deg);
+        }
+    }
+
+    @keyframes hour{
+        from{
+            transform: rotate(-60deg);
+        }
+        to{
+            transform: rotate(300deg);
+        }
+    }
+
+
+
+</style>
+
+<body>
+
+    <div id="circle">
+
+        <div class="inner-circle">
+
+        </div>
+
+        <div class="dot">
+
+        </div>
+
+        <div class="sui second">
+        </div>
+
+        <div class="sui hour">
+        </div>
+
+        <div class="sui minute">
+        </div>
+
+        
+    </div>
+
+</body>
+</html>
