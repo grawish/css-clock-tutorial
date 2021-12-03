@@ -1,0 +1,12 @@
+.box{
+    height: 500px;
+    width: 500px;
+    background: #FFF;
+    box-shadow: 0 0 50px #000;
+    transition: 0.5s ease;
+}
+
+.box:hover{
+    box-shadow: 0 0 50px #000;
+    border-radius: 50%;
+}

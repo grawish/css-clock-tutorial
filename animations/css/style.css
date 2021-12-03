@@ -1,0 +1,25 @@
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    animation: anime 5s linear infinite forwards;
+}
+
+.play {
+    animation-play-state: running;
+}
+
+@keyframes anime {
+    10% {
+        transform: translateX(10px);
+    }
+    30% {
+        transform: translateX(100px) rotate(90deg);
+    }
+    50% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: scale(3);
+    }
+}
